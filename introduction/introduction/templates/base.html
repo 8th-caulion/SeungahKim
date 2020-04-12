@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김승아의 자기소개</title>
+    <h1>김승아는 누구일까?</h1>
+</head>
+<body>
+    {% block contents %}
+    {% endblock %}
+</body>
+<footer>
+    <h3><a href = "{% url 'home' %}">GO HOME</a></h3>
+    <h3><a href = "{% url 'profile' %}">GO PROFILE</a></h3>
+    <h3><a href = "{% url 'future' %}">GO PORTFOLIO</a></h3>
+    <h3><a href = "{% url 'gallery' %}">GO GALLERY</a></h3>
+</footer>
+</html>
