@@ -23,5 +23,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('text.urls')),
     path('gallery/', gallery.views.gallery, name = "gallery"),
-    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
 ]
