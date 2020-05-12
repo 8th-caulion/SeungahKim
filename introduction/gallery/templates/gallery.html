@@ -3,23 +3,21 @@
 
 <body>
     {% block contents %}
-
-    {% for image in images.all %}
-
     <div class="row row-cols-1 row-cols-md-3">
       <div class="card" style = "margin-bottom : 25px;">
         <div class="card-header" style="text-align:center">
         <h3 >추억과 TMI</h3>
       </div>
+      {% for image in images.all %}
       <div class="card-body">
-        <img src="{{image.photo.url}}" alt="...">
+        <img src="{{image.photo.url}}" alt="..." style="width: 100%;">
         <h5 class="card-title">{{image.title}}</h5>
         <p class="card-text">{{image.summary}}</p>
-        <!-- <a href="{% url 'imageDetail' image.id %}" class="btn btn-info">더보기</a> -->
       </div>
+      {% endfor %}
+
     </div>
-  
-  {% endfor %}
+
 
     {% endblock %}
 </body>
