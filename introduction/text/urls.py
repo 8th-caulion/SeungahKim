@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-import text.views
+from . import views
 
 urlpatterns = [
-    path('', text.views.home, name = "home"),
-    path('profile/', text.views.profile, name = "profile"),
-    path('future/', text.views.future, name = "future"),
+    path('', views.home, name = "home"),
+    path('profile/', views.profile, name = "profile"),
+    path('future/', views.future, name = "future"),
 ]
