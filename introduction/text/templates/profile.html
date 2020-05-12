@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<body>
+    {% block contents %}
+    <div align="center">
+        <img src="{% static 'img/face.jpg' %}" alt="..." height = "400px" style="border:10px solid yellow; margin: 30px;">
+        <h3>이름 : 김승아</h3>
+        <h3>나이 : 21살</h3>
+        <h3>출생지 : 충청남도</h3>
+    </div>
+    <div align="center" style= "margin: 100px;">
+        <div class="alert alert-warning" role="alert">
+            <h3>소속</h3>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <img src="{% static 'img/liom.png' %}" height = "50px"class="align-self-center mr-3" alt="...">
+                멋쟁이 사자처럼 8기
+            </li>
+            <li class="list-group-item">
+                <img src="{% static 'img/school.png' %}" height = "50px"class="align-self-center mr-3" alt="...">
+                중앙대학교 소프트웨어학부 2학년
+            </li>
+        </ul>
+    </div>
+    <div align="center" style= "margin: 100px;">
+        <div class="alert alert-warning" role="alert">
+            <h3>좋아하는 것들</h3>
+        </div>
+        <ol class="list-group">
+            <li class="list-group-item">
+                <img src="{% static 'img/frog.png' %}" height = "50px"class="align-self-center mr-3" alt="...">
+                개구리
+            </li>
+            <li class="list-group-item">
+                얼음
+            </li>
+            <li class="list-group-item">
+                당근 케이크
+            </li>
+            <li class="list-group-item">
+                카페에서 파는 음료
+            </li>
+            <li class="list-group-item">
+                한강 가기
+            </li>
+            <li class="list-group-item">
+                노래 부르기
+            </li>
+            <li class="list-group-item">
+                고구동산
+            </li>
+        </ol>
+    </div>
+
+    <div align="center" style= "margin: 100px;">
+        <div class="alert alert-warning" role="alert">
+            <h3>SNS</h3>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h3>SNS : @sa_fg_</h3>
+            </li>
+            <li class="list-group-item">
+                <h4>sa = 승아  fg = frog</h4>
+            </li>
+        </ul>
+    </div>
+
+    {% endblock %}
+</body>

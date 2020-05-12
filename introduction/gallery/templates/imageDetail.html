@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+    <div class="card-header text-info">{{imageDetails.title}}</div>
+        <div class="card-body text-info">
+            <div align="center">
+                <img src="{{imageDetails.photo.url}}" height = "300px" alt="..."style="border:10px solid rgba(132, 158, 243, 0.863); margin: 30px;">
+                <p class="card-text">{{imageDetails.body}}</p>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+{% endblock %}

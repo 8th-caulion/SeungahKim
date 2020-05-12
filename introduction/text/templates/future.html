@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<body>
+    {% block contents %}
+    <div class="alert alert-info" align="center" role="alert">
+        <h3>제 꿈은 제 분야에서 스스로 자랑스러운 사람이 되는 것입니다.<br/><h3>
+    </div>
+   
+        <ul class="list-group">
+            <li class="list-group-item" align="center">
+                <form action = "{% url 'create' %}">
+                <div class="input-group mb-3">
+                    <input name = "text" type="text" class="form-control" placeholder="응원의 한 마디!" aria-label="cheer" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button type = "submit" class="btn btn-outline-secondary" type="button" id="button-addon2">입력</button>
+                    </div>
+                  </div>
+                </form>
+            </li>
+            <li class="list-group-item">
+                <div style="overflow:scroll; height:300px;">
+                    {% for cheer in cheers %}
+                    <div class="media" style="border:2px solid rgb(64, 180, 196); margin: 3px;">
+                        <img src="{% static 'img/person.jpg' %}" height = "85px"class="mr-3" alt="...">
+                        <div class="media-body">
+                          <h8 class="mt-0">응원글<hr/></h8>
+                          <h5>{{cheer.text}}</h5>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </li>
+        </ul>
+
+    
+
+            <div  style= "margin: 100px;">
+                <div class="alert alert-info" align="center" role="alert">
+                    <h3>2020년 목표</h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        1. 멋쟁이 사자처럼 완전 잘해내기
+                    </li>
+                    <li class="list-group-item">
+                        2. 영어회화 술술하기
+                    </li>
+                    <li class="list-group-item">
+                        3. 저축하기
+                    </li>
+                    <li class="list-group-item">
+                        4. 학점 관리하기
+                    </li>
+                    <li class="list-group-item">
+                        5. 해외현장 교육 합격하기
+                        <h6>사실 2, 3, 4는 2021년에 해외현장교육 꼭 가고 싶어서 준비하는 내용입니다.</h6>
+                    </li>
+                </ul>
+            </div>
+
+            <div  style= "margin: 100px;">
+                <div class="alert alert-info" align="center" role="alert">
+                    <h3>4월 목표</h3>
+                    <h6>5월이 된 지금 과연 얼마나 목표를 달성했을까요?</h6>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge badge-danger">X</span>
+                        1. 싸강 안밀리기
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge badge-danger">X</span>
+                        2. 가계부 바로바로 쓰기
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge badge-danger">X</span>
+                        3. 책 읽기
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge badge-danger">X</span>
+                        4. 운동 시작하기
+                    </li>
+                    <li class="list-group-item">
+                        <h6>^_^</h6>
+                    </li>
+                </ul>
+            </div>
+
+            <div  style= "margin: 100px;">
+                <div class="alert alert-info" align="center" role="alert">
+                    <h3>5월 목표</h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        1. 싸강 안밀리기 + 미리 공부 하기(특히 미적분)
+                    </li>
+                    <li class="list-group-item">
+                        2. 가계부 바로바로 쓰기
+                    </li>
+                    <li class="list-group-item">
+                        3. 영어회화 공부하기
+                    </li>
+                    <li class="list-group-item">
+                        4. 운동 시작하기
+                    </li>
+                    <li class="list-group-item">
+                        5. 절대 지각하지 않기
+                    </li>
+                </ul>
+            </div>
+
+
+    {% endblock %}
+</body>
